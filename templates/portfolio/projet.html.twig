@@ -1,0 +1,288 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/projets.css') }}">
+{% endblock %}
+
+{% block body %}
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{{ path('app_home') }}">Mon Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" aria-controls="navbarNav" 
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link " href="{{ path('app_home') }}">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ path('app_propos') }}">À propos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ path('app_projects') }}">Projets</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="{{ path('app_cv') }}">CV</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Section Projets -->
+<section class="projects-preview py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Mes projets réalisés</h2>
+    <p class="intro-text">Voici un aperçu des différents projets que j'ai déjà réalisés, présentant mes expériences et compétences acquises au fil de mes réalisations.</p>
+    
+    <div class="row g-4">
+      <!-- Projet 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card h-100">
+          <div class="project-image">
+            <i class="bi bi-award"></i>
+          </div>
+          <div class="card-body project-content">
+            <h3 class="card-title h5 mb-3">Certification MOOC</h3>
+            <p class="card-text mb-3">
+              Suivi et validation d'un MOOC pour renforcer mes compétences théoriques et pratiques dans le domaine de l'informatique et des réseaux
+            </p>
+            <div class="project-tags d-flex flex-wrap gap-2">
+              <span class="badge tag">Théorie</span>
+              <span class="badge tag">Autonomie</span>
+              <span class="badge tag">Pratique</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card h-100">
+          <div class="project-image">
+            <i class="bi bi-diagram-3"></i>
+          </div>
+          <div class="card-body project-content">
+            <h3 class="card-title h5 mb-3">Réseau d'entreprise</h3>
+            <p class="card-text mb-3">
+              Conception et déploiement d'un réseau local avec configuration de VLAN, serveur TFTP et connexions SSH sécurisées
+            </p>
+            <div class="project-tags d-flex flex-wrap gap-2">
+              <span class="badge tag">VLAN</span>
+              <span class="badge tag">TFTP</span>
+              <span class="badge tag">SSH</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card h-100">
+          <div class="project-image">
+            <i class="bi bi-router"></i>
+          </div>
+          <div class="card-body project-content">
+            <h3 class="card-title h5 mb-3">Couverture Wi-Fi / Devis / Cuivre</h3>
+            <p class="card-text mb-3">
+              Optimisation de la connectivité avec planification Wi-Fi, élaboration de devis de câblage et vérification de conformité cuivre
+            </p>
+            <div class="project-tags d-flex flex-wrap gap-2">
+              <span class="badge tag">Wi-Fi</span>
+              <span class="badge tag">Devis</span>
+              <span class="badge tag">Câblage</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 4 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card h-100">
+          <div class="project-image">
+            <i class="bi bi-laptop"></i>
+          </div>
+          <div class="card-body project-content">
+            <h3 class="card-title h5 mb-3">E-Portfolio</h3>
+            <p class="card-text mb-3">
+              Création d'un portfolio numérique regroupant compétences, projets et expériences de manière professionnelle et accessible
+            </p>
+            <div class="project-tags d-flex flex-wrap gap-2">
+              <span class="badge tag">Organisation</span>
+              <span class="badge tag">Design</span>
+              <span class="badge tag">Présentation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 5 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card h-100">
+          <div class="project-image">
+            <i class="bi bi-filetype-csv"></i>
+          </div>
+          <div class="card-body project-content">
+            <h3 class="card-title h5 mb-3">Analyse TCPDUMP</h3>
+            <p class="card-text mb-3">
+              Analyse de fichier réseau pour détecter des activités suspectes avec Python, génération CSV et visualisation Web Markdown
+            </p>
+            <div class="project-tags d-flex flex-wrap gap-2">
+              <span class="badge tag">Python</span>
+              <span class="badge tag">CSV</span>
+              <span class="badge tag">Excel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 6 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card h-100">
+          <div class="project-image">
+            <i class="bi bi-car-front"></i>
+          </div>
+          <div class="card-body project-content">
+            <h3 class="card-title h5 mb-3">Site web automobile</h3>
+            <p class="card-text mb-3">
+              Création d'un site web sur l'univers automobile avec pages interactives, contenus multimédias et navigation intuitive
+            </p>
+            <div class="project-tags d-flex flex-wrap gap-2">
+              <span class="badge tag">HTML</span>
+              <span class="badge tag">Multimédia</span>
+              <span class="badge tag">Navigation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 7 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card h-100">
+          <div class="project-image">
+            <i class="bi bi-ethernet"></i>
+          </div>
+          <div class="card-body project-content">
+            <h3 class="card-title h5 mb-3">Câblage fibre optique et cuivre</h3>
+            <p class="card-text mb-3">
+              Installation et soudure de câbles en fibre optique et câblage cuivre pour des connexions fiables et conformes aux normes
+            </p>
+            <div class="project-tags d-flex flex-wrap gap-2">
+              <span class="badge tag">Fibre</span>
+              <span class="badge tag">Cuivre</span>
+              <span class="badge tag">Normes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 8 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card h-100">
+          <div class="project-image">
+            <i class="bi bi-house-gear"></i>
+          </div>
+          <div class="card-body project-content">
+            <h3 class="card-title h5 mb-3">Installation domotique automatisée</h3>
+            <p class="card-text mb-3">
+              Conception d'un système domotique intégrant automatisation, contrôle à distance et scénarios intelligents pour le confort
+            </p>
+            <div class="project-tags d-flex flex-wrap gap-2">
+              <span class="badge tag">Automatisation</span>
+              <span class="badge tag">Intégration</span>
+              <span class="badge tag">Optimisation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 9 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card h-100">
+          <div class="project-image">
+            <i class="bi bi-pc-display"></i>
+          </div>
+          <div class="card-body project-content">
+            <h3 class="card-title h5 mb-3">Montage ordinateur fixe</h3>
+            <p class="card-text mb-3">
+              Assemblage d'un ordinateur fixe avec choix des composants, installation du matériel, câblage et configuration système
+            </p>
+            <div class="project-tags d-flex flex-wrap gap-2">
+              <span class="badge tag">Composants</span>
+              <span class="badge tag">Câblage</span>
+              <span class="badge tag">Configuration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <h5 class="footer-title mb-3">Lubin Vezant</h5>
+        <p class="footer-text">
+          Étudiant passionné par l'informatique.
+        </p>
+        <div class="social-links mt-3">
+          <a href="#" class="social-link me-3" aria-label="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="#" class="social-link me-3" aria-label="GitHub">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="#" class="social-link me-3" aria-label="Email">
+            <i class="bi bi-envelope"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <i class="bi bi-twitter"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <h5 class="footer-title mb-3">Navigation</h5>
+        <ul class="footer-links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/about">À propos</a></li>
+          <li><a href="/projects">Projets</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <h5 class="footer-title mb-3">Contact</h5>
+        <ul class="footer-links">
+          <li>
+            <i class="bi bi-envelope me-2"></i>
+            <a href="mailto:lubin.vezant@etu.univ-st-etienne.fr">lubin.vezant@etu.univ-st-etienne.fr</a>
+          </li>
+          <li>
+            <i class="bi bi-geo-alt me-2"></i>
+            Saint-Étienne, France
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="footer-divider my-4">
+
+    <div class="row">
+      <div class="col-md-6 text-center text-md-start">
+        <p class="footer-copyright mb-0">
+          © 2026 Lubin Vezant. Tous droits réservés.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+{% endblock %}

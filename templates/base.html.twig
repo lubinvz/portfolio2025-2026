@@ -1,14 +1,252 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Mon Portfolio{% endblock %}</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lubin Vezant - Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
+<!-- Menu navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark menu-haut">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Mon Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuNavigation">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#competences">Compétences</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projets">Projets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Section accueil -->
+<section class="section-accueil">
+    <div class="fond-anime">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="contenu-principal text-center">
+                    <h1 class="titre-principal">Bienvenue sur mon Portfolio</h1>
+                    <p class="sous-titre">
+                        Je suis <span class="mon-nom">Lubin Vezant</span>, étudiant passionné par le développement web
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fleche-bas">
+        <span></span>
+    </div>
+</section>
+
+<!-- Section compétences -->
+<section class="zone-competences" id="competences">
+    <div class="container">
+        <h2 class="titre-section text-center">Mes Compétences</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="carte-competence">
+                    <div class="icone-competence">
+                        <i class="bi bi-ethernet"></i>
+                    </div>
+                    <h3 class="h4 text-center mb-3">Télécom</h3>
+                    <p class="text-center">
+                        Manipulation de signaux, mesures sur oscilloscope et mise en œuvre de liaisons filaires et sans‑fil en télécommunications.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="carte-competence">
+                    <div class="icone-competence">
+                        <i class="bi bi-router"></i>
+                    </div>
+                    <h3 class="h4 text-center mb-3">Réseaux</h3>
+                    <p class="text-center">
+                        Configuration de réseaux IPv4/IPv6, segmentation en VLAN, routage, et analyse de trafic pour maîtriser les fondamentaux du réseau.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="carte-competence">
+                    <div class="icone-competence">
+                        <i class="bi bi-code-slash"></i>
+                    </div>
+                    <h3 class="h4 text-center mb-3">Programmation</h3>
+                    <p class="text-center">
+                        Développement d'applications en C et Python, maîtrise des bases algorithmiques et création de programmes fiables et structurés.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section projets -->
+<section class="zone-projets" id="projets">
+    <div class="container">
+        <h2 class="titre-section text-center">Projets Récents</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="carte-projet">
+                    <div class="image-projet">
+                        <i class="bi bi-laptop"></i>
+                    </div>
+                    <div class="infos-projet">
+                        <h3 class="h5 mb-3">E-Portfolio</h3>
+                        <p class="mb-3">
+                            E-portfolio créé à l'aide de l'outil Symfony
+                        </p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge etiquette">Symfony</span>
+                            <span class="badge etiquette">HTML/CSS</span>
+                            <span class="badge etiquette">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="carte-projet">
+                    <div class="image-projet">
+                        <i class="bi bi-hdd-network"></i>
+                    </div>
+                    <div class="infos-projet">
+                        <h3 class="h5 mb-3">Réseau d'entreprise</h3>
+                        <p class="mb-3">
+                            Création d'un réseau simple d'entreprise
+                        </p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge etiquette">VLAN</span>
+                            <span class="badge etiquette">Cisco</span>
+                            <span class="badge etiquette">Virtualisation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="carte-projet">
+                    <div class="image-projet">
+                        <i class="bi bi-modem"></i>
+                    </div>
+                    <div class="infos-projet">
+                        <h3 class="h5 mb-3">Câblage</h3>
+                        <p class="mb-3">
+                            Réalisation de câblage de fibre optique et cuivre
+                        </p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge etiquette">Fibre optique</span>
+                            <span class="badge etiquette">Cuivre</span>
+                            <span class="badge etiquette">Câblage</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <a href="#" class="btn btn-lg bouton-principal">Voir tous les projets</a>
+        </div>
+    </div>
+</section>
+
+<!-- Section contact -->
+<section class="zone-contact" id="contact">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="h1 mb-4">Intéressé par mon travail ?</h2>
+                <p class="lead mb-4">
+                    N'hésitez pas à me contacter et à consulter mon CV.
+                </p>
+                <a href="#" class="btn btn-lg bouton-principal">Mon CV</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pied de page -->
+<footer class="pied-page">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <h5 class="titre-footer">Lubin Vezant</h5>
+                <p class="texte-footer">
+                    Étudiant passionné par l'informatique.
+                </p>
+                <div class="reseaux-sociaux mt-3">
+                    <a href="#" class="lien-social">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="#" class="lien-social">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    <a href="#" class="lien-social">
+                        <i class="bi bi-envelope"></i>
+                    </a>
+                    <a href="#" class="lien-social">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <h5 class="titre-footer">Navigation</h5>
+                <ul class="liens-footer">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#competences">Compétences</a></li>
+                    <li><a href="#projets">Projets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <h5 class="titre-footer">Contact</h5>
+                <ul class="liens-footer">
+                    <li>
+                        <i class="bi bi-envelope me-2"></i>
+                        <a href="mailto:lubin.vezant@etu.univ-st-etienne.fr">lubin.vezant@etu.univ-st-etienne.fr</a>
+                    </li>
+                    <li>
+                        <i class="bi bi-geo-alt me-2"></i>
+                        Saint-Étienne, France
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="separateur">
+
+        <div class="row">
+            <div class="col text-center">
+                <p class="copyright">
+                    © 2026 Lubin Vezant. Tous droits réservés.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

@@ -1,0 +1,245 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/propos.css') }}">
+{% endblock %}
+
+{% block body %}
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{{ path('app_home') }}">Mon Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" aria-controls="navbarNav" 
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{{ path('app_home') }}">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ path('app_propos') }}">À propos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ path('app_projects') }}">Projets</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ path('app_cv') }}">CV</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Header -->
+<section class="page-header">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 text-center">
+        <h1 class="page-title">À propos de moi</h1>
+        <p class="page-subtitle">
+          Découvrez mon parcours, mes passions et mes aspirations professionnelles
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Présentation Personnelle -->
+<section class="about-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <h2 class="section-title">Qui suis-je ?</h2>
+        <div class="content-card">
+          <p class="content-text">
+            Bonjour, je m'appelle <span class="highlight">Lubin Vezant</span>, j'ai 18 ans et je suis passionné par l'informatique. 
+            Je me définis comme une personne <span class="highlight">curieuse</span>, <span class="highlight">rigoureuse</span> 
+            et <span class="highlight">autonome</span>, avec une forte capacité à résoudre des problèmes et à apprendre rapidement 
+            de nouvelles technologies.
+          </p>
+          <p class="content-text" style="margin-top: 1.5rem;">
+            J'apprécie particulièrement le travail en équipe, où je peux partager mes connaissances et apprendre des autres, 
+            tout en étant capable de travailler de manière indépendante lorsque cela est nécessaire. Mon approche du travail 
+            repose sur la persévérance et l'amélioration continue.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Parcours -->
+<section class="about-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <h2 class="section-title">Mon parcours</h2>
+        
+        <div class="timeline-item">
+          <h3 class="timeline-title">BUT Réseaux et Télécommunications (R&T)</h3>
+          <span class="timeline-period">Depuis 2024</span>
+          <p class="timeline-description">
+            Actuellement en première année de BUT R&T, je me spécialise dans les systèmes et réseaux informatiques, 
+            la programmation et la cybersécurité. Cette formation me permet d'acquérir des compétences techniques 
+            solides et de développer mon sens de l'organisation à travers plusieurs projets pratiques.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <h3 class="timeline-title">Baccalauréat Technologique STI2D - Option SIN</h3>
+          <span class="timeline-period">2024</span>
+          <p class="timeline-description">
+            Obtention du baccalauréat technologique STI2D, option Systèmes d'Information et Numérique (SIN), 
+            au lycée René Cassin à Tarare. Cette formation m'a permis de découvrir les fondamentaux de l'informatique 
+            et de confirmer ma passion pour ce domaine.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Passions et Centres d'intérêt -->
+<section class="about-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <h2 class="section-title">Mes passions</h2>
+        
+        <div class="interest-grid">
+          <div class="interest-card">
+            <div class="interest-icon">
+              <i class="bi bi-laptop"></i>
+            </div>
+            <h3 class="interest-title">Informatique</h3>
+            <p class="interest-text">
+              Passionné par les nouvelles technologies, la programmation et la cybersécurité. 
+              J'aime explorer de nouveaux outils et développer mes compétences techniques.
+            </p>
+          </div>
+
+          <div class="interest-card">
+            <div class="interest-icon">
+              <i class="bi bi-trophy"></i>
+            </div>
+            <h3 class="interest-title">Sport</h3>
+            <p class="interest-text">
+              Pratiquant régulier de musculation et de tennis, le sport me permet de développer 
+              ma discipline, ma persévérance et de maintenir un équilibre sain entre travail et loisirs.
+            </p>
+          </div>
+
+          <div class="interest-card">
+            <div class="interest-icon">
+              <i class="bi bi-car-front"></i>
+            </div>
+            <h3 class="interest-title">Automobile</h3>
+            <p class="interest-text">
+              Grand amateur de l'univers automobile, je suis fasciné par les innovations technologiques 
+              et la mécanique. Cette passion nourrit ma créativité et mon sens de l'analyse.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Objectifs et Aspirations -->
+<section class="about-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <h2 class="section-title">Mes objectifs</h2>
+        
+        <div class="goal-card">
+          <h3><i class="bi bi-shield-lock me-2"></i>Cybersécurité</h3>
+          <p>
+            Mon objectif professionnel est de travailler dans le domaine de la <span class="highlight">cybersécurité</span>, 
+            en combinant mes compétences techniques et mon intérêt pour la protection des systèmes informatiques. 
+            Je suis convaincu que la sécurité des données est un enjeu majeur de notre époque.
+          </p>
+        </div>
+
+        <div class="goal-card">
+          <h3><i class="bi bi-graph-up-arrow me-2"></i>Perspectives d'avenir</h3>
+          <p>
+            À l'avenir, je souhaite soit poursuivre mes études pour approfondir mes connaissances en cybersécurité 
+            et me spécialiser davantage, soit intégrer l'armée dans un service spécialisé en cybersécurité, 
+            où je pourrais mettre mes compétences au service de missions stratégiques et cruciales.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer py-5">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Colonne À propos -->
+      <div class="col-md-4">
+        <h5 class="footer-title mb-3">Lubin Vezant</h5>
+        <p class="footer-text">
+          Étudiant passionné par l'informatique.
+        </p>
+        <div class="social-links mt-3">
+          <a href="#" class="social-link me-3" aria-label="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="#" class="social-link me-3" aria-label="GitHub">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="#" class="social-link me-3" aria-label="Email">
+            <i class="bi bi-envelope"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <i class="bi bi-twitter"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Colonne Navigation -->
+      <div class="col-md-4">
+        <h5 class="footer-title mb-3">Navigation</h5>
+        <ul class="footer-links">
+          <li><a href="{{ path('app_home') }}">Accueil</a></li>
+          <li><a href="{{ path('app_propos') }}">À propos</a></li>
+          <li><a href="{{ path('app_projects') }}">Projets</a></li>
+          <li><a href="{{ path('app_cv') }}">CV</a></li>
+        </ul>
+      </div>
+
+      <!-- Colonne Contact -->
+      <div class="col-md-4">
+        <h5 class="footer-title mb-3">Contact</h5>
+        <ul class="footer-links">
+          <li>
+            <i class="bi bi-envelope me-2"></i>
+            <a href="mailto:lubin.vezant@etu.univ-st-etienne.fr">lubin.vezant@etu.univ-st-etienne.fr</a>
+          </li>
+          <li>
+            <i class="bi bi-geo-alt me-2"></i>
+            Saint-Étienne, France
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="footer-divider my-4">
+
+    <div class="row">
+      <div class="col-md-6 text-center text-md-start">
+        <p class="footer-copyright mb-0">
+          © 2026 Lubin Vezant. Tous droits réservés.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+{% endblock %}

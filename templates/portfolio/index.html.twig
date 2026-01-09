@@ -1,9 +1,14 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+{% endblock %}
+
 {% block body %}
+<!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Mon Portfolio</a>
+    <a class="navbar-brand" href="{{ path('app_home') }}">Mon Portfolio</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
             data-bs-target="#navbarNav" aria-controls="navbarNav" 
             aria-expanded="false" aria-label="Toggle navigation">
@@ -11,44 +16,237 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="/">Accueil</a></li>
-        <li class="nav-item"><a class="nav-link" href="/about">À propos</a></li>
-        <li class="nav-item"><a class="nav-link" href="/projects">Projets</a></li>
-        <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ path('app_home') }}">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ path('app_propos') }}">À propos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ path('app_projects') }}">Projets</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="{{ path('app_cv') }}">CV</a>
+        </li>
+
       </ul>
     </div>
   </div>
 </nav>
 
-<header class="bg-primary text-white text-center py-5">
-    <div class="container">
-        <h1 class="display-4">Bienvenue sur mon e‑Portfolio</h1>
-        <p class="lead">Je suis Lubin Vezant, étudiant passionné.</p>
-        <a href="/projects" class="btn btn-light btn-lg mt-3">Voir mes projets</a>
-    </div>
-</header>
-
-<section class="py-5">
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-bg">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
   <div class="container">
-    <h2 class="text-center mb-4">Mes compétences</h2>
-    <div class="row">
-      <div class="col-md-4 text-center">
-        <i class="bi bi-code-slash fs-1"></i>
-        <h4>Développement Web</h4>
-        <p>Symfony, PHP, JavaScript, HTML/CSS</p>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="hero-content text-center">
+          <h1 class="hero-title">Bienvenue sur mon Portfolio</h1>
+          <p class="hero-subtitle">
+            Je suis <span class="hero-name">Lubin Vezant</span>, étudiant passionné par le développement web
+          </p>
+        </div>
       </div>
-      <div class="col-md-4 text-center">
-        <i class="bi bi-palette fs-1"></i>
-        <h4>Design</h4>
-        <p>UI/UX, Bootstrap, Figma</p>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span></span>
+  </div>
+</section>
+
+<!-- Section Compétences -->
+<section class="skills-section py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Mes Compétences</h2>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="skill-card h-100">
+          <div class="skill-icon mx-auto mb-4">
+            <i class="bi bi-ethernet"></i>
+          </div>
+          <h3 class="h4 text-center mb-3">Télécom</h3>
+          <p class="text-center">
+            Manipulation de signaux, mesures sur oscilloscope et mise en œuvre de liaisons filaires et sans‑fil en télécommunications.
+        </div>
       </div>
-      <div class="col-md-4 text-center">
-        <i class="bi bi-database fs-1"></i>
-        <h4>Bases de données</h4>
-        <p>MySQL, PostgreSQL</p>
+      <div class="col-md-6 col-lg-4">
+        <div class="skill-card h-100">
+          <div class="skill-icon mx-auto mb-4">
+            <i class="bi bi-router"></i>
+          </div>
+          <h3 class="h4 text-center mb-3">Reseaux</h3>
+          <p class="text-center">
+            Configuration de réseaux IPv4/IPv6, segmentation en VLAN, routage, et analyse de trafic pour maîtriser les fondamentaux du réseau.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="skill-card h-100">
+          <div class="skill-icon mx-auto mb-4">
+            <i class="bi bi-code-slash"></i>
+          </div>
+          <h3 class="h4 text-center mb-3">Programmation</h3>
+          <p class="text-center">
+            Développement d’applications en C et Python, maîtrise des bases algorithmiques et création de programmes fiables et structurés.
+          </p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Section Projets Récents -->
+<section class="projects-preview py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Projets Récents</h2>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card h-100">
+          <div class="project-image">
+            <i class="bi bi-laptop"></i>
+          </div>
+          <div class="card-body project-content">
+            <h3 class="card-title h5 mb-3">E-Portfolio</h3>
+            <p class="card-text mb-3">
+              E-portfolio cree a l'aide de l'outil Symfony
+            </p>
+            <div class="project-tags d-flex flex-wrap gap-2">
+              <span class="badge tag">Symfony</span>
+              <span class="badge tag">HTML/css</span>
+              <span class="badge tag">Bootstrap</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card h-100">
+          <div class="project-image">
+            <i class="bi bi-hdd-network"></i>
+          </div>
+          <div class="card-body project-content">
+            <h3 class="card-title h5 mb-3">Reseau d'entreprise</h3>
+            <p class="card-text mb-3">
+              Création d'un reseaux simple d'entreprise
+            </p>
+            <div class="project-tags d-flex flex-wrap gap-2">
+              <span class="badge tag">Vlan</span>
+              <span class="badge tag">Cisco</span>
+              <span class="badge tag">Virtualisation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card h-100">
+          <div class="project-image">
+            <i class="bi bi-modem"></i>
+          </div>
+          <div class="card-body project-content">
+            <h3 class="card-title h5 mb-3">Cablage</h3>
+            <p class="card-text mb-3">
+              Réalisation de cablage de fibre optique et cuivre
+            </p>
+            <div class="project-tags d-flex flex-wrap gap-2">
+              <span class="badge tag">Fibre optique</span>
+              <span class="badge tag">Cuivre</span>
+              <span class="badge tag">Cablage</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-5">
+      <a href="/projects" class="btn btn-primary btn-lg btn-custom">Voir tous les projets</a>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta-section py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <h2 class="h1 mb-4">Intéressé par mon travail ?</h2>
+        <p class="lead mb-4">
+          N'hésitez pas à me contacter et a consulter mon CV.
+        </p>
+        <a href="/cv" class="btn btn-primary btn-lg btn-custom">Mon CV</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer py-5">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Colonne À propos -->
+      <div class="col-md-4">
+        <h5 class="footer-title mb-3">Lubin Vezant</h5>
+        <p class="footer-text">
+          Étudiant passionné par l'informatique.
+        </p>
+        <div class="social-links mt-3">
+          <a href="#" class="social-link me-3" aria-label="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="#" class="social-link me-3" aria-label="GitHub">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="#" class="social-link me-3" aria-label="Email">
+            <i class="bi bi-envelope"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <i class="bi bi-twitter"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Colonne Navigation -->
+      <div class="col-md-4">
+        <h5 class="footer-title mb-3">Navigation</h5>
+        <ul class="footer-links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/about">À propos</a></li>
+          <li><a href="/projects">Projets</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Colonne Contact -->
+      <div class="col-md-4">
+        <h5 class="footer-title mb-3">Contact</h5>
+        <ul class="footer-links">
+          <li>
+            <i class="bi bi-envelope me-2"></i>
+            <a href="mailto:lubin.vezant@exemple.fr">lubin.vezant@etu.univ-st-etienne.fr</a>
+          </li>
+          <li>
+            <i class="bi bi-geo-alt me-2"></i>
+            Saint-Étienne, France
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <hr class="footer-divider my-4">
+
+
+    <div class="row">
+      <div class="col-md-6 text-center text-md-start">
+        <p class="footer-copyright mb-0">
+          © 2026 Lubin Vezant. Tous droits réservés.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</footer>
 {% endblock %}
